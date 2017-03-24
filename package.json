@@ -1,23 +1,22 @@
 {
-  "name": "fp",
+  "name": "webpack2-starter",
   "version": "1.0.0",
-  "description": "",
+  "description": "Starter kit to launch projects faster with webpack/babel-es2015/dev-server configured",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "babel-core": "^6.24.0",
-    "babel-loader": "^6.4.1",
-    "babel-preset-es2015": "^6.24.0",
-    "html-loader": "^0.4.5",
-    "jquery": "^3.2.1",
-    "webpack": "^2.3.1",
-    "webpack-dev-server": "^2.4.2"
+    "babel-core": "6.24.0",
+    "babel-loader": "6.4.1",
+    "babel-preset-es2015": "6.24.0",
+    "jquery": "3.2.1",
+    "webpack": "2.3.1",
+    "webpack-dev-server": "2.4.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server"
   },
   "keywords": [],
-  "author": "Andrey Volkov <a.volkov@semrush.com> (https://www.semrush.com)",
+  "author": "Andrey Volkov <valkan78@gmail.com>",
   "license": "ISC"
 }
