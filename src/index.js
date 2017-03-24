@@ -1,17 +1,38 @@
 
 import $ from 'jquery';
 
+import mainView from 'pages/main';
+
 const Application = config => {
+    $(()=>{
 
-    const $app = $('#app');
+        const state = {
+            menu: [
+                {
+                    anchor: "Overview",
+                    href: "/overview"
+                },
+                {
+                    anchor: "Backlinks",
+                    href: "/overview"
+                },
+                {
+                    anchor: "Anchors",
+                    href: "/overview"
+                },
+            ]
+        }
 
-    $app.html(`
-        blablablas
-    `);
 
+        const $app = $('#app');
 
+        $app.html(
+            new mainView(state)
+        )
 
-
+    });
 }
+
+Application();
 
 module.exports = Application;
