@@ -1,28 +1,32 @@
+/*
+    pages/main/index.js
+*/
+
+
 // import template from './template.html';
 // import templateItem from './template-item.html';
 
+import Navigation from 'components/menu';
 
-module.exports = (state) => {
 
-    const renderMenuItem = (item) => {
-        const template = `<a href="${item.href}">${item.anchor}</a>`
-        return template;
-    }
+module.exports = state => {
 
-    const renderMenu = (items) => {
-        const reducer = (acc, item) => {
-            return acc += item;
-        }
-
-        const renderedItems = items
-                .map(renderMenuItem)
-                .reduce(reducer);
-        const template = `<nav>${renderedItems}</nav>`
-        return template;
-    }
 
     return () => {
-        return renderMenu(state.menu);
+        const nav = Navigation(state);
+
+        const template = `
+        ${ nav }
+        <content>
+            content
+        </content>
+        <footer>
+
+        </footer>
+        `;
+
+        return template;
+
     }
 
 }

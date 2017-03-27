@@ -1,28 +1,16 @@
 
+/*
+    ROOT
+    index.js
+ */
+
 import $ from 'jquery';
 
 import mainView from 'pages/main';
+import state from 'state/index';
 
 const Application = config => {
     $(()=>{
-
-        const state = {
-            menu: [
-                {
-                    anchor: "Overview",
-                    href: "/overview"
-                },
-                {
-                    anchor: "Backlinks",
-                    href: "/overview"
-                },
-                {
-                    anchor: "Anchors",
-                    href: "/overview"
-                },
-            ]
-        }
-
 
         const $app = $('#app');
 
@@ -34,5 +22,7 @@ const Application = config => {
 }
 
 Application();
+
+////////////////////////////////////////////////////////////////////////////////
 
 module.exports = Application;
